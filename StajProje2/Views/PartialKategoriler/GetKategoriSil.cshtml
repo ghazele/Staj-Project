@@ -1,0 +1,31 @@
+﻿@using StajProje2.Controllers
+@model StajProje2.Models.PageItem
+@{ Layout = null;}
+
+<div id="mdlForm" class="modal-content">
+    @*=========================== modal Header===========================*@
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="danger bigger">Silme işlemi</h4>
+    </div>
+    @*=========================== modal body===========================*@
+    <div class="modal-body">
+        <div class="row">
+            <div class="col-md-12 col-sm-12">
+                @Model.lstKategorilerIslem.FirstOrDefault().kategoriBaslik isimli kategoriyi silmek istediğinize emin misiniz?
+            </div>
+        </div>
+    </div>
+    @*=========================== modal footer============================*@
+    <div class="modal-footer">
+        <button class="btn btn-sm" data-dismiss="modal">
+            <i class="ace-icon fa fa-times"></i>
+            Vazgeç
+        </button>
+
+        <a class="btn btn-danger" data-mode="KategoriSilTamamla" data-data1="@Model.lstKategorilerIslem.FirstOrDefault().kategoriID">Sil</a>
+
+    </div>
+
+</div>
+

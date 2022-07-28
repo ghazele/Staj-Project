@@ -1,0 +1,65 @@
+﻿@using StajProje2.Controllers
+@using BusinessLibrary;
+@model StajProje2.Models.PageItem
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<br />
+<br />
+<div class="footerLogo">
+
+    <h1><span>Urun Eklemek</span></h1>
+</div>
+<div class=" row">
+    <div class="col-md-12">
+        <a class="btn btn-sm btn-success pull-right" data-mode="UrunGuncelle" data-data="">+&nbsp;yeni</a>
+    </div>
+
+    <table class="table contentTable">
+        <thead>
+            <tr>
+                <th>Ürün Id</th>
+                <th>Ürün Resmi</th>
+                <th>Ürün Kod</th>
+                <th>Ürün kategoriler</th>
+                <th>Ürün Başlık</th>
+                <th>Ürün Açıklama</th>
+                <th>Ürün Eski fiyati</th>
+                <th>Ürün Indrem</th>
+                <th>Ürün Fiyati</th>
+                <th>Güncelle</th>
+                <th>Sil</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.lstUrnlerIslme)
+            {
+                <tr>
+                    <td>@item.urunID</td>
+                    <td>
+                        @if (item.urunResimUrl != null)
+                        {<img src="@item.urunResimUrl" /> }
+                        else
+                        {<img src="/Assets/images/resim_yok.png" />}
+                    </td>
+                    <td>@item.urunKodu</td>
+                    <td>@item.kategoriBaslik</td>
+                    <td>@item.urunBaslik</td>
+                    <td>@item.urunAciklama</td>
+                    <td>@item.urunEskiFiyat &nbsp;₺</td>
+                    <td>@item.urunIndrim &nbsp;%</td>
+                    <td> @item.urunfiyat &nbsp;₺</td>
+
+                    <td><a class="btn btn-sm btn-info" data-mode="UrunGuncelle" data-data1="@item.urunID">Güncelle</a></td>
+
+                    <td><a class="btn btn-sm btn-danger" data-mode="UrunSil" data-data1="@item.urunID">Sil</a></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+</div>
+<div class="modal fade" id="mdl" role="dialog">
+    <div id="dvMdlDialog" class="modal-dialog">
+    </div>
+</div>

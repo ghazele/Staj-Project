@@ -1,0 +1,54 @@
+﻿@using StajProje2.Controllers
+@using EntityFrameworkLibrary
+@model StajProje2.Models.PageItem
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+<div class="footerLogo">
+
+    <h1><span>Kategori Eklemek</span></h1>
+</div>
+<br />
+<br />
+<div class="row">
+    <div class="col-md-12">
+        <a class="btn btn-sm btn-success pull-right" data-mode="KategoriGuncelle" data-data1="">+&nbsp;Yeni</a>
+    </div>
+
+    <div class="col-md-12">
+
+        <table class="table tabel-hover contentTable">
+            <thead>
+                <tr>
+                    <th>Kategori Kod</th>
+                    <th>Kategori Başlık</th>
+                    <th>Güncelle</th>
+                    <th>Sil</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model.lstKategorilerIslem)
+                {
+                    <tr>
+                        <td>@item.kategoriID</td>
+                        <td>@item.kategoriBaslik</td>
+                        <td><a class="btn btn-sm btn-info" data-mode="KategoriGuncelle" data-data1="@item.kategoriID">Güncelle</a></td>
+
+                        <td><a class="btn btn-sm btn-danger" data-mode="KategoriSil" data-data1="@item.kategoriID">Sil</a></td>
+
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="modal fade" id="mdl" role="dialog">
+    <div id="dvMdlDialog" class="modal-dialog">
+    </div>
+</div>
+
+

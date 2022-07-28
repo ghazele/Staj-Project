@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="StajProje2Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <Function Name="Proc_Kategoriler_Islem" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Islem" Type="nvarchar" Mode="In" />
+    <Parameter Name="KategoriID" Type="int" Mode="In" />
+    <Parameter Name="KategoriBaslik" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="Proc_Urunler_Islem" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Islem" Type="nvarchar" Mode="In" />
+    <Parameter Name="UrunID" Type="int" Mode="In" />
+    <Parameter Name="KategoriID" Type="int" Mode="In" />
+    <Parameter Name="UrunKodu" Type="nvarchar" Mode="In" />
+    <Parameter Name="UrunBaslik" Type="nvarchar" Mode="In" />
+    <Parameter Name="UrunAciklama" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="UrunResimUrl" Type="nvarchar" Mode="In" />
+    <Parameter Name="UrunEskiFiyat" Type="int" Mode="In" />
+    <Parameter Name="UrunInderm" Type="int" Mode="In" />
+    <Parameter Name="Urunfiyat" Type="float" Mode="In" />
+  </Function>
+  <EntityContainer Name="StajProje2ModelStoreContainer" />
+</Schema>

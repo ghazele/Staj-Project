@@ -1,0 +1,12 @@
+C:\Users\ghala\Desktop\Gazel\Skills\APS .NET\stajProjeler\Staj defteri\StajProje2\EntityFrameworkLibrary\bin\Debug\EntityFrameworkLibrary.dll.config
+C:\Users\ghala\Desktop\Gazel\Skills\APS .NET\stajProjeler\Staj defteri\StajProje2\EntityFrameworkLibrary\bin\Debug\EntityFrameworkLibrary.dll
+C:\Users\ghala\Desktop\Gazel\Skills\APS .NET\stajProjeler\Staj defteri\StajProje2\EntityFrameworkLibrary\bin\Debug\EntityFrameworkLibrary.pdb
+C:\Users\ghala\Desktop\Gazel\Skills\APS .NET\stajProjeler\Staj defteri\StajProje2\EntityFrameworkLibrary\bin\Debug\EntityFramework.dll
+C:\Users\ghala\Desktop\Gazel\Skills\APS .NET\stajProjeler\Staj defteri\StajProje2\EntityFrameworkLibrary\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\ghala\Desktop\Gazel\Skills\APS .NET\stajProjeler\Staj defteri\StajProje2\EntityFrameworkLibrary\bin\Debug\EntityFramework.xml
+C:\Users\ghala\Desktop\Gazel\Skills\APS .NET\stajProjeler\Staj defteri\StajProje2\EntityFrameworkLibrary\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\ghala\Desktop\Gazel\Skills\APS .NET\stajProjeler\Staj defteri\StajProje2\EntityFrameworkLibrary\obj\Debug\EntityFrameworkLibrary.csproj.AssemblyReference.cache
+C:\Users\ghala\Desktop\Gazel\Skills\APS .NET\stajProjeler\Staj defteri\StajProje2\EntityFrameworkLibrary\obj\Debug\EntityFrameworkLibrary.csproj.CoreCompileInputs.cache
+C:\Users\ghala\Desktop\Gazel\Skills\APS .NET\stajProjeler\Staj defteri\StajProje2\EntityFrameworkLibrary\obj\Debug\EntityFrameworkLibrary.csproj.CopyComplete
+C:\Users\ghala\Desktop\Gazel\Skills\APS .NET\stajProjeler\Staj defteri\StajProje2\EntityFrameworkLibrary\obj\Debug\EntityFrameworkLibrary.dll
+C:\Users\ghala\Desktop\Gazel\Skills\APS .NET\stajProjeler\Staj defteri\StajProje2\EntityFrameworkLibrary\obj\Debug\EntityFrameworkLibrary.pdb

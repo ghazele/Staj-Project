@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="StajProje2Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="StajProje2Entities" annotation:LazyLoadingEnabled="true">
+    <FunctionImport Name="Proc_Kategoriler_Islem" ReturnType="Collection(StajProje2Model.Proc_Kategoriler_Islem_Result)">
+      <Parameter Name="Islem" Mode="In" Type="String" />
+      <Parameter Name="KategoriID" Mode="In" Type="Int32" />
+      <Parameter Name="KategoriBaslik" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="Proc_Urunler_Islem" ReturnType="Collection(StajProje2Model.Proc_Urunler_Islem_Result)">
+      <Parameter Name="Islem" Mode="In" Type="String" />
+      <Parameter Name="UrunID" Mode="In" Type="Int32" />
+      <Parameter Name="KategoriID" Mode="In" Type="Int32" />
+      <Parameter Name="UrunKodu" Mode="In" Type="String" />
+      <Parameter Name="UrunBaslik" Mode="In" Type="String" />
+      <Parameter Name="UrunAciklama" Mode="In" Type="String" />
+      <Parameter Name="UrunResimUrl" Mode="In" Type="String" />
+      <Parameter Name="UrunEskiFiyat" Mode="In" Type="Int32" />
+      <Parameter Name="UrunInderm" Mode="In" Type="Int32" />
+      <Parameter Name="Urunfiyat" Mode="In" Type="Double" />
+    </FunctionImport>
+  </EntityContainer>
+  <ComplexType Name="Proc_Kategoriler_Islem_Result">
+    <Property Type="Int32" Name="kategoriID" Nullable="false" />
+    <Property Type="String" Name="kategoriBaslik" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="Proc_Urunler_Islem_Result">
+    <Property Type="Int32" Name="urunID" Nullable="false" />
+    <Property Type="String" Name="urunKodu" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="urunBaslik" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="urunAciklama" Nullable="true" />
+    <Property Type="String" Name="urunResimUrl" Nullable="true" MaxLength="250" />
+    <Property Type="Int32" Name="urunEskiFiyat" Nullable="true" />
+    <Property Type="Int32" Name="urunIndrim" Nullable="true" />
+    <Property Type="Double" Name="urunfiyat" Nullable="true" />
+    <Property Type="Int32" Name="kategoriID" Nullable="true" />
+    <Property Type="String" Name="kategoriBaslik" Nullable="true" MaxLength="50" />
+  </ComplexType>
+</Schema>

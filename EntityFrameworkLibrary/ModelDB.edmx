@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="StajProje2Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <Function Name="Proc_Kategoriler_Islem" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Islem" Type="nvarchar" Mode="In" />
+          <Parameter Name="KategoriID" Type="int" Mode="In" />
+          <Parameter Name="KategoriBaslik" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="Proc_Urunler_Islem" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Islem" Type="nvarchar" Mode="In" />
+          <Parameter Name="UrunID" Type="int" Mode="In" />
+          <Parameter Name="KategoriID" Type="int" Mode="In" />
+          <Parameter Name="UrunKodu" Type="nvarchar" Mode="In" />
+          <Parameter Name="UrunBaslik" Type="nvarchar" Mode="In" />
+          <Parameter Name="UrunAciklama" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="UrunResimUrl" Type="nvarchar" Mode="In" />
+          <Parameter Name="UrunEskiFiyat" Type="int" Mode="In" />
+          <Parameter Name="UrunInderm" Type="int" Mode="In" />
+          <Parameter Name="Urunfiyat" Type="float" Mode="In" />
+        </Function>
+        <EntityContainer Name="StajProje2ModelStoreContainer" />
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="StajProje2Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="StajProje2Entities" annotation:LazyLoadingEnabled="true" >
+          <FunctionImport Name="Proc_Kategoriler_Islem" ReturnType="Collection(StajProje2Model.Proc_Kategoriler_Islem_Result)">
+            <Parameter Name="Islem" Mode="In" Type="String" />
+            <Parameter Name="KategoriID" Mode="In" Type="Int32" />
+            <Parameter Name="KategoriBaslik" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="Proc_Urunler_Islem" ReturnType="Collection(StajProje2Model.Proc_Urunler_Islem_Result)">
+            <Parameter Name="Islem" Mode="In" Type="String" />
+            <Parameter Name="UrunID" Mode="In" Type="Int32" />
+            <Parameter Name="KategoriID" Mode="In" Type="Int32" />
+            <Parameter Name="UrunKodu" Mode="In" Type="String" />
+            <Parameter Name="UrunBaslik" Mode="In" Type="String" />
+            <Parameter Name="UrunAciklama" Mode="In" Type="String" />
+            <Parameter Name="UrunResimUrl" Mode="In" Type="String" />
+            <Parameter Name="UrunEskiFiyat" Mode="In" Type="Int32" />
+            <Parameter Name="UrunInderm" Mode="In" Type="Int32" />
+            <Parameter Name="Urunfiyat" Mode="In" Type="Double" />
+          </FunctionImport>
+        </EntityContainer>
+        <ComplexType Name="Proc_Kategoriler_Islem_Result">
+          <Property Type="Int32" Name="kategoriID" Nullable="false" />
+          <Property Type="String" Name="kategoriBaslik" Nullable="true" MaxLength="50" />
+        </ComplexType>
+        <ComplexType Name="Proc_Urunler_Islem_Result">
+          <Property Type="Int32" Name="urunID" Nullable="false" />
+          <Property Type="String" Name="urunKodu" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="urunBaslik" Nullable="true" MaxLength="250" />
+          <Property Type="String" Name="urunAciklama" Nullable="true" />
+          <Property Type="String" Name="urunResimUrl" Nullable="true" MaxLength="250" />
+          <Property Type="Int32" Name="urunEskiFiyat" Nullable="true" />
+          <Property Type="Int32" Name="urunIndrim" Nullable="true" />
+          <Property Type="Double" Name="urunfiyat" Nullable="true" />
+          <Property Type="Int32" Name="kategoriID" Nullable="true" />
+          <Property Type="String" Name="kategoriBaslik" Nullable="true" MaxLength="50" />
+        </ComplexType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="StajProje2ModelStoreContainer" CdmEntityContainer="StajProje2Entities" >
+          <FunctionImportMapping FunctionImportName="Proc_Kategoriler_Islem" FunctionName="StajProje2Model.Store.Proc_Kategoriler_Islem">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="StajProje2Model.Proc_Kategoriler_Islem_Result">
+                <ScalarProperty Name="kategoriID" ColumnName="kategoriID" />
+                <ScalarProperty Name="kategoriBaslik" ColumnName="kategoriBaslik" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="Proc_Urunler_Islem" FunctionName="StajProje2Model.Store.Proc_Urunler_Islem">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="StajProje2Model.Proc_Urunler_Islem_Result">
+                <ScalarProperty Name="urunID" ColumnName="urunID" />
+                <ScalarProperty Name="urunKodu" ColumnName="urunKodu" />
+                <ScalarProperty Name="urunBaslik" ColumnName="urunBaslik" />
+                <ScalarProperty Name="urunAciklama" ColumnName="urunAciklama" />
+                <ScalarProperty Name="urunResimUrl" ColumnName="urunResimUrl" />
+                <ScalarProperty Name="urunEskiFiyat" ColumnName="urunEskiFiyat" />
+                <ScalarProperty Name="urunIndrim" ColumnName="urunIndrim" />
+                <ScalarProperty Name="urunfiyat" ColumnName="urunfiyat" />
+                <ScalarProperty Name="kategoriID" ColumnName="kategoriID" />
+                <ScalarProperty Name="kategoriBaslik" ColumnName="kategoriBaslik" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

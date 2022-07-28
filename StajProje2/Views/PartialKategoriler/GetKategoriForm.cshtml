@@ -1,0 +1,85 @@
+﻿@using StajProje2.Controllers
+@model StajProje2.Models.PageItem
+@{
+    Layout = null;
+}
+<div id="mdlForm" class="modal-content">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+
+        @if (Model.lstUrnlerIslme.FirstOrDefault().urunID > 0)
+        {
+            <h4 class="blue bigger">Ürün düzenle</h4>
+
+        }
+        else
+        {
+            <h4 class="blue bigger">Ürün ekle</h4>
+        }
+    </div>
+    <div class="modal-body">
+        <div class="row">
+            <div class="col-md-6 col-sm-12">
+                <label class="control-label">Kategori</label>
+                <select class="form-control" type='select' name="selectKategoriler" data-required='true' data-group_name='ModalForm' data-message_type='formmessage'>
+                    @foreach (var item in Model.lstKategorilerIslem)
+                    {
+                        if (item.kategoriID == Model.lstUrnlerIslme.FirstOrDefault().kategoriID)
+                        {
+                            <option value="@item.kategoriID" selected="selected">@item.kategoriBaslik</option>
+                        }
+                        else
+                        {
+                            <option value="@item.kategoriID">@item.kategoriBaslik</option>
+                        }
+                    }
+                </select>
+            </div>
+
+            <div class="col-md-6 col-sm-12">
+                <label class="control-label">Ürün Resim </label>
+                <div style="border:1px solid black; width:120px; height:140px;">
+                    <img alt="Alternate Text" src="@Model.lstUrnlerIslme.FirstOrDefault().urunResimUrl" id="previewImage" style="width:100%; height:100%;" />
+                </div>
+                <input type="hidden" name="hdnUrunResim" value="@Model.lstUrnlerIslme.FirstOrDefault().urunResimUrl" />
+                <input type="file" class="form-control" name="fileUrunResim" onchange="ShowImagePreview(this,document.getElementById('previewImage'))" />
+            </div>
+
+
+
+
+            <div class="col-md-6 col-sm-12">
+                <label class="control-label">Ürün Kodu </label>
+                <input type="text" class="form-control" name="txtUrunKodu" value="@Model.lstUrnlerIslme.FirstOrDefault().urunKodu" data-required='true' data-group_name='ModalForm' data-message_type='formmessage' />
+            </div>
+            <div class="col-md-6 col-sm-12">
+                <label class="control-label">Ürün Başlık </label>
+                <input type="text" class="form-control" name="txtUrunBaslik" value="@Model.lstUrnlerIslme.FirstOrDefault().urunBaslik" data-required='true' data-group_name='ModalForm' data-message_type='formmessage' />
+            </div>
+            <div class="col-md-6 col-sm-12">
+                <label class="control-label">Ürün fiyat </label>
+                <input type="text" class="form-control" name="txtUrunEskiFiyat" value="@Model.lstUrnlerIslme.FirstOrDefault().urunfiyat" data-required='true' data-group_name='ModalForm' data-message_type='formmessage' />
+            </div>
+            <div class="col-md-6 col-sm-12">
+                <label class="control-label">Ürün Indrem </label>
+                <input type="text" class="form-control" name="txtUrunIndrem" value="@Model.lstUrnlerIslme.FirstOrDefault().urunIndrim" data-required='true' data-group_name='ModalForm' data-message_type='formmessage' />
+            </div>
+            <div class="col-md-12 col-sm-12">
+                <label class="control-label">Ürün Açıklama </label>
+                <input class="form-control" style="height:50px;" name="txtUrunAciklama" value="@Model.lstUrnlerIslme.FirstOrDefault().urunAciklama" data-required='true' data-group_name='ModalForm' data-message_type='formmessage' />
+            </div>
+
+
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-sm" data-dismiss="modal">
+            <i class="ace-icon fa fa-times"></i>
+            Kapat
+        </button>
+        <a class="btn btn-success" data-mode="UrunIslem" data-data1="@Model.lstUrnlerIslme.FirstOrDefault().urunID" data-required='true' data-moving_scroll_bar='1' data-group_name='ModalForm'>Kaydet</a>
+    </div>
+</div>
+
+

@@ -1,0 +1,106 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;600;700&display=swap');
+/*font-family: 'Roboto Slab', serif;*/
+@import url('https://fonts.googleapis.com/css2?family=Merienda&display=swap');
+/*font-family: 'Merienda', cursive;*/
+:root {
+    --color_gey: #A9A9A9;
+    --color_grey_light: #808080;
+    --color_grey_lighter: #696969;
+    --color_header_background: #8585852e;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Slab', serif;
+    transition: all .3s linear;
+    text-decoration: none;
+    list-style: none;
+}
+
+.sucessBtn {
+    background-color: #d9d9d9;
+    text-align: center;
+    color: var(--color_grey);
+    border: 1px solid grey;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    text-decoration: none !important;
+    text-decoration: none !important;
+    margin-right: .4rem;
+}
+
+.sucessBtn:hover {
+    background-color: #b9b9b9;
+    color: var(--color_grey) !important;
+}
+
+.bilgiBtn {
+    background-color: #b9b9b9;
+    text-align: center;
+    color: var(--color_grey);
+    border: 1px solid grey;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    text-decoration: none !important;
+}
+
+.bilgiBtn:hover {
+    background-color: #d9d9d9;
+    color: var(--color_grey) !important;
+}
+
+.contentTable {
+    max-width: 20rem;
+    border-collapse: collapse;
+    margin-bottom: 2rem;
+}
+
+.contentTable thead tr {
+    background: #a9a9a9cf;
+    font-size: 1.4rem;
+    color: #525151c7;
+    font-weight: bold;
+}
+
+.contentTable th,
+.contentTable tr {
+    padding: 2rem 0.5rem !important;
+}
+
+.contentTable td input {
+    border: 1px solid grey;
+    outline: none;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    width: 10rem;
+    padding-left: 1rem;
+}
+
+.contentTable td img {
+    height: 7rem;
+    width: 7rem;
+}
+
+.contentTable tbody tr {
+    border-bottom: 2px solid #e9e9e9a3;
+}
+
+.contentTable tbody tr:nth-child(even) {
+    background: #e9e9e9a3;
+}
+
+.contentTable tbody tr:nth-child(odd) {
+    background: #fff;
+}
+
+.contentTable tbody tr:last-of-type {
+    border-bottom: 2px solid var(--color_gey);
+}
+
+.contentTable td {
+    padding: .9rem;
+}

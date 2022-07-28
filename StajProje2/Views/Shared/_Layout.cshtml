@@ -1,0 +1,146 @@
+﻿
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STaj Proje 2</title>
+    <link rel="stylesheet" href="~/Assets/images/logo1.png" />
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+
+    @*css LInks*@
+    <link rel="stylesheet" href="~/Content/CSS/HeaderDesgin.css" />
+    <link rel="stylesheet" href="~/Content/CSS/RootAndFont.css" />
+    <link rel="stylesheet" href="~/Content/CSS/FooterDesgin.css" />
+    <link rel="stylesheet" href="~/Content/CSS/LoginDesgin.css" />
+    <link rel="stylesheet" href="~/Content/CSS/SingUpDesgin.css" />
+    <link rel="stylesheet" href="~/Content/CSS/UrunlerKatalogDesgin.css" />
+    <link rel="stylesheet" href="~/Content/CSS/SparislerimDesign.css" />
+
+
+
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+
+    <header class="Header">
+        <div class="HeaderLogo">
+            <a href="home"> <img src="~/Assets/images/logo1.png" /></a>
+        </div>
+        <div class="HeaderMenu">
+            <ul>
+                <li><a href="http://localhost:50014/Home/Index"><span>AnaSayfa</span></a></li>
+                <li><a href="http://localhost:50014/kategoriler/kategoriList">Kategoriler</a></li>
+                <li><a href="http://localhost:50014/Urunler/UrunList">Ürünler</a></li>
+                
+            </ul>
+        </div>
+
+
+        <div class="HeaderRight">
+            <br />
+            <div class="UserBag HeaderRight1">
+                <i class='bx bxs-shopping-bag-alt'></i>
+                <a href="http://localhost:50014/Sparis/sparislerim"><span>Sepetim</span></a>
+            </div>
+
+            <div class="HeaderUserName HeaderRight1">
+                <i class='bx bxs-user'></i>
+                <a href="#"><span>User Name</span></a>
+            </div>
+
+
+        </div>
+    </header>
+
+
+
+    <div class="container body-content">
+        @RenderBody()
+
+        <br />
+        <br />
+        <br />
+        <br />
+
+
+    </div>
+
+
+
+
+    <footer class="FooterContaier">
+        <div class="footerLogo">
+
+            <h1><span>Gazel Elaryani</span></h1>
+        </div>
+
+        <div class="FooterBoxContainer">
+
+            <div class="FooterBox">
+                <h1>Takip Et</h1>
+                <div class="FooterIcons">
+                    <i class='bx bxl-instagram-alt'></i>
+                    <i class='bx bxl-facebook'></i>
+                    <i class='bx bxl-twitter'></i>
+                </div>
+            </div>
+
+            <div class="FooterBox">
+                <h1>Hızlı Linkler</h1>
+                <div class="FooterLinks">
+                    <a>
+                        <i class='bx bx-right-arrow-alt'></i>
+                        <span>Ana Sayfa</span>
+                    </a>
+                    <a>
+                        <i class='bx bx-right-arrow-alt'></i>
+                        <span>ürünler</span>
+                    </a>
+                    <a>
+                        <i class='bx bx-right-arrow-alt'></i>
+                        <span>Hakkımızda</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="FooterBox">
+                <h1>İletişim</h1>
+                <div class="FooterLinks">
+                    <a class="textDecoration">
+                        <i class='bx bxs-phone'></i>
+                        <span>ürünler</span>
+                    </a>
+                    <a class="textDecoration">
+                        <i class='bx bxs-envelope'></i>
+                        <span>gh.alarian@gmil.com</span>
+                    </a>
+                    <a class="textDecoration">
+                        <i class='bx bxs-map-alt'></i>
+                        <span>Turkey/Antakya</span>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+    </footer>
+
+
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+
+    <script src="~/Assets/plugins/post_.js"></script>
+    <script src="~/Assets/plugins/form-validation.js"></script>
+    <script src="~/Assets/plugins/Kategoriprocess.js"></script>
+    <script src="~/Assets/plugins/Urunprocess.js"></script>
+    <script src="~/Assets/plugins/SparisProcess.js"></script>
+    <script src="~/Assets/plugins/MusteriProcess.js"></script>
+
+
+
+</body>
+</html>

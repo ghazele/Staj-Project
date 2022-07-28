@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="StajProje2ModelStoreContainer" CdmEntityContainer="StajProje2Entities">
+    <FunctionImportMapping FunctionImportName="Proc_Kategoriler_Islem" FunctionName="StajProje2Model.Store.Proc_Kategoriler_Islem">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="StajProje2Model.Proc_Kategoriler_Islem_Result">
+          <ScalarProperty Name="kategoriID" ColumnName="kategoriID" />
+          <ScalarProperty Name="kategoriBaslik" ColumnName="kategoriBaslik" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Proc_Urunler_Islem" FunctionName="StajProje2Model.Store.Proc_Urunler_Islem">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="StajProje2Model.Proc_Urunler_Islem_Result">
+          <ScalarProperty Name="urunID" ColumnName="urunID" />
+          <ScalarProperty Name="urunKodu" ColumnName="urunKodu" />
+          <ScalarProperty Name="urunBaslik" ColumnName="urunBaslik" />
+          <ScalarProperty Name="urunAciklama" ColumnName="urunAciklama" />
+          <ScalarProperty Name="urunResimUrl" ColumnName="urunResimUrl" />
+          <ScalarProperty Name="urunEskiFiyat" ColumnName="urunEskiFiyat" />
+          <ScalarProperty Name="urunIndrim" ColumnName="urunIndrim" />
+          <ScalarProperty Name="urunfiyat" ColumnName="urunfiyat" />
+          <ScalarProperty Name="kategoriID" ColumnName="kategoriID" />
+          <ScalarProperty Name="kategoriBaslik" ColumnName="kategoriBaslik" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

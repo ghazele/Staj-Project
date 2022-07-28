@@ -1,0 +1,87 @@
+﻿.Header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--color_header_background);
+    padding: 1rem 0.9rem;
+    height: 7.9rem;
+    margin-bottom: 3rem;
+}
+
+.HeaderLogo a img {
+    height: 5rem;
+    width: 11rem;
+    cursor: pointer;
+}
+
+.HeaderRight {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: .9rem;
+}
+
+.HeaderRight1 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    gap: .7rem;
+    border: 1px solid #6969695c;
+    padding: .9rem 1.4rem;
+    border-radius: .5rem;
+    background: #fffcfcd9;
+}
+
+    .HeaderRight1 i {
+        font-size: 1.9rem;
+        color: black;
+    }
+
+.HeaderRight a {
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: #525151c7;
+    text-decoration: none !important;
+}
+
+.HeaderMenu ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2.6rem
+}
+
+    .HeaderMenu ul li a {
+        color: #525151c7;
+        font-size: 1.5rem;
+        font-weight: 600;
+        cursor: pointer;
+        text-decoration: none !important;
+    }
+
+        .HeaderMenu ul li a:hover {
+            color: black;
+        }
+
+
+.NavSection {
+    position: absolute;
+    background: var(--color_header_background);
+    padding: .8rem 0.6rem;
+    flex-direction: column;
+    z-index: 2000;
+}
+
+    .NavSection ul li {
+        padding: 0 .7rem;
+    }
+
+.NoMenu {
+    display: none;
+}
+
+.YesMenu:hover .NoMenu {
+    display: block;
+}

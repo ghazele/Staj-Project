@@ -1,0 +1,6 @@
+C:\Users\ghala\Desktop\Gazel\Skills\APS .NET\stajProjeler\Staj defteri\StajProje2\BusinessLibrary\bin\Debug\BusinessLibrary.dll
+C:\Users\ghala\Desktop\Gazel\Skills\APS .NET\stajProjeler\Staj defteri\StajProje2\BusinessLibrary\bin\Debug\BusinessLibrary.pdb
+C:\Users\ghala\Desktop\Gazel\Skills\APS .NET\stajProjeler\Staj defteri\StajProje2\BusinessLibrary\obj\Debug\BusinessLibrary.csproj.AssemblyReference.cache
+C:\Users\ghala\Desktop\Gazel\Skills\APS .NET\stajProjeler\Staj defteri\StajProje2\BusinessLibrary\obj\Debug\BusinessLibrary.csproj.CoreCompileInputs.cache
+C:\Users\ghala\Desktop\Gazel\Skills\APS .NET\stajProjeler\Staj defteri\StajProje2\BusinessLibrary\obj\Debug\BusinessLibrary.dll
+C:\Users\ghala\Desktop\Gazel\Skills\APS .NET\stajProjeler\Staj defteri\StajProje2\BusinessLibrary\obj\Debug\BusinessLibrary.pdb
